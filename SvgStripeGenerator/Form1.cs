@@ -16,5 +16,20 @@ namespace SvgStripeGenerator
         {
             InitializeComponent();
         }
+
+        string MySVGstart = "";
+        string MyySVGcontent = "";
+        string MySVGend = "";
+
+
+        private void MyBottonWrite_Click(object sender, EventArgs e)
+        {
+            Console.Beep();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

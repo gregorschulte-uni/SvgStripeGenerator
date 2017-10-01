@@ -28,12 +28,66 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.MyBottonWrite = new System.Windows.Forms.Button();
+            this.MyTextBoxHeight = new System.Windows.Forms.TextBox();
+            this.MyTextBoxWidth = new System.Windows.Forms.TextBox();
+            this.MyTextBoxStripes = new System.Windows.Forms.TextBox();
+            this.SuspendLayout();
+            // 
+            // MyBottonWrite
+            // 
+            this.MyBottonWrite.Location = new System.Drawing.Point(157, 194);
+            this.MyBottonWrite.Name = "MyBottonWrite";
+            this.MyBottonWrite.Size = new System.Drawing.Size(108, 29);
+            this.MyBottonWrite.TabIndex = 0;
+            this.MyBottonWrite.Text = "Write SVG";
+            this.MyBottonWrite.UseVisualStyleBackColor = true;
+            this.MyBottonWrite.Click += new System.EventHandler(this.MyBottonWrite_Click);
+            // 
+            // MyTextBoxHeight
+            // 
+            this.MyTextBoxHeight.Location = new System.Drawing.Point(166, 12);
+            this.MyTextBoxHeight.Name = "MyTextBoxHeight";
+            this.MyTextBoxHeight.Size = new System.Drawing.Size(100, 26);
+            this.MyTextBoxHeight.TabIndex = 1;
+            // 
+            // MyTextBoxWidth
+            // 
+            this.MyTextBoxWidth.Location = new System.Drawing.Point(165, 45);
+            this.MyTextBoxWidth.Name = "MyTextBoxWidth";
+            this.MyTextBoxWidth.Size = new System.Drawing.Size(100, 26);
+            this.MyTextBoxWidth.TabIndex = 2;
+            // 
+            // MyTextBoxStripes
+            // 
+            this.MyTextBoxStripes.Location = new System.Drawing.Point(166, 78);
+            this.MyTextBoxStripes.Name = "MyTextBoxStripes";
+            this.MyTextBoxStripes.Size = new System.Drawing.Size(100, 26);
+            this.MyTextBoxStripes.TabIndex = 3;
+            // 
+            // Form1
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Text = "Form1";
+            this.ClientSize = new System.Drawing.Size(278, 244);
+            this.Controls.Add(this.MyTextBoxStripes);
+            this.Controls.Add(this.MyTextBoxWidth);
+            this.Controls.Add(this.MyTextBoxHeight);
+            this.Controls.Add(this.MyBottonWrite);
+            this.Name = "Form1";
+            this.Text = "SvgWiter";
+            this.Load += new System.EventHandler(this.Form1_Load);
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
+
+        private System.Windows.Forms.Button MyBottonWrite;
+        private System.Windows.Forms.TextBox MyTextBoxHeight;
+        private System.Windows.Forms.TextBox MyTextBoxWidth;
+        private System.Windows.Forms.TextBox MyTextBoxStripes;
     }
 }
 
