@@ -32,12 +32,12 @@
             this.MyTextBoxHeight = new System.Windows.Forms.TextBox();
             this.MyTextBoxWidth = new System.Windows.Forms.TextBox();
             this.MyTextBoxStripes = new System.Windows.Forms.TextBox();
-            this.colorDialog1 = new System.Windows.Forms.ColorDialog();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.colorDialog2 = new System.Windows.Forms.ColorDialog();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.MyColorDialogFill = new System.Windows.Forms.ColorDialog();
+            this.MyPictureBoxFillColor = new System.Windows.Forms.PictureBox();
+            this.MyPictureBoxFillColor2 = new System.Windows.Forms.PictureBox();
+            this.MyColorDialogFill2 = new System.Windows.Forms.ColorDialog();
+            ((System.ComponentModel.ISupportInitialize)(this.MyPictureBoxFillColor)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MyPictureBoxFillColor2)).BeginInit();
             this.SuspendLayout();
             // 
             // MyBottonWrite
@@ -64,7 +64,9 @@
             this.MyTextBoxWidth.Name = "MyTextBoxWidth";
             this.MyTextBoxWidth.Size = new System.Drawing.Size(100, 26);
             this.MyTextBoxWidth.TabIndex = 2;
-            this.MyTextBoxWidth.Text = "206.088";
+            this.MyTextBoxWidth.Text = "206";
+            this.MyTextBoxWidth.TextChanged += new System.EventHandler(this.MyTextBoxWidth_TextChanged);
+            this.MyTextBoxWidth.Leave += new System.EventHandler(this.MyTextBoxWidht_leave);
             // 
             // MyTextBoxStripes
             // 
@@ -74,40 +76,41 @@
             this.MyTextBoxStripes.TabIndex = 3;
             this.MyTextBoxStripes.Text = "20";
             this.MyTextBoxStripes.TextChanged += new System.EventHandler(this.MyTextBoxStripes_TextChanged);
+            this.MyTextBoxStripes.Leave += new System.EventHandler(this.MyTextBoxStripes_leave);
             // 
-            // pictureBox1
+            // MyPictureBoxFillColor
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Black;
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Location = new System.Drawing.Point(13, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(26, 26);
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.MyPictureBoxFillColor.BackColor = System.Drawing.Color.Black;
+            this.MyPictureBoxFillColor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.MyPictureBoxFillColor.Location = new System.Drawing.Point(166, 122);
+            this.MyPictureBoxFillColor.Name = "MyPictureBoxFillColor";
+            this.MyPictureBoxFillColor.Size = new System.Drawing.Size(26, 26);
+            this.MyPictureBoxFillColor.TabIndex = 4;
+            this.MyPictureBoxFillColor.TabStop = false;
+            this.MyPictureBoxFillColor.Click += new System.EventHandler(this.MyPictureBoxFillColor_Click);
             // 
-            // pictureBox2
+            // MyPictureBoxFillColor2
             // 
-            this.pictureBox2.BackColor = System.Drawing.Color.White;
-            this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox2.Location = new System.Drawing.Point(12, 44);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(26, 27);
-            this.pictureBox2.TabIndex = 5;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            this.MyPictureBoxFillColor2.BackColor = System.Drawing.Color.White;
+            this.MyPictureBoxFillColor2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.MyPictureBoxFillColor2.Location = new System.Drawing.Point(166, 154);
+            this.MyPictureBoxFillColor2.Name = "MyPictureBoxFillColor2";
+            this.MyPictureBoxFillColor2.Size = new System.Drawing.Size(26, 27);
+            this.MyPictureBoxFillColor2.TabIndex = 5;
+            this.MyPictureBoxFillColor2.TabStop = false;
+            this.MyPictureBoxFillColor2.Click += new System.EventHandler(this.MyPictureBoxFillColor2_Click);
             // 
-            // colorDialog2
+            // MyColorDialogFill2
             // 
-            this.colorDialog2.Color = System.Drawing.Color.White;
+            this.MyColorDialogFill2.Color = System.Drawing.Color.White;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(278, 244);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pictureBox1);
+            this.ClientSize = new System.Drawing.Size(368, 304);
+            this.Controls.Add(this.MyPictureBoxFillColor2);
+            this.Controls.Add(this.MyPictureBoxFillColor);
             this.Controls.Add(this.MyTextBoxStripes);
             this.Controls.Add(this.MyTextBoxWidth);
             this.Controls.Add(this.MyTextBoxHeight);
@@ -115,8 +118,8 @@
             this.Name = "Form1";
             this.Text = "SvgWiter";
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MyPictureBoxFillColor)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MyPictureBoxFillColor2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -128,10 +131,10 @@
         private System.Windows.Forms.TextBox MyTextBoxHeight;
         private System.Windows.Forms.TextBox MyTextBoxWidth;
         private System.Windows.Forms.TextBox MyTextBoxStripes;
-        private System.Windows.Forms.ColorDialog colorDialog1;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.ColorDialog colorDialog2;
+        private System.Windows.Forms.ColorDialog MyColorDialogFill;
+        private System.Windows.Forms.PictureBox MyPictureBoxFillColor;
+        private System.Windows.Forms.PictureBox MyPictureBoxFillColor2;
+        private System.Windows.Forms.ColorDialog MyColorDialogFill2;
     }
 }
 
