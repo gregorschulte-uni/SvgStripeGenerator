@@ -72,7 +72,7 @@
             this.MyTextBoxStripes.Name = "MyTextBoxStripes";
             this.MyTextBoxStripes.Size = new System.Drawing.Size(100, 26);
             this.MyTextBoxStripes.TabIndex = 3;
-            this.MyTextBoxStripes.Text = "2";
+            this.MyTextBoxStripes.Text = "20";
             this.MyTextBoxStripes.TextChanged += new System.EventHandler(this.MyTextBoxStripes_TextChanged);
             // 
             // pictureBox1

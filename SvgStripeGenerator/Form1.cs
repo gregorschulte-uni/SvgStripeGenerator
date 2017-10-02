@@ -38,6 +38,9 @@ namespace SvgStripeGenerator
                 color = !color;
             }
 
+            MySVGcontent = MySVGcontent + "<rect x=\"" + (1 * (double.Parse(MyTextBoxWidth.Text) / int.Parse(MyTextBoxStripes.Text))).ToString() + "mm\" y=\"10mm\" height=\"100mm\" width=\"" + ((double.Parse(MyTextBoxWidth.Text))).ToString() + "mm\" style=\"stroke:#000000; stroke-width:0.1mm; fill: none  \"/> \n\r";
+
+
             MySVG = MySVGstart + MySVGcontent + MySVGend;
             File.WriteAllText(path, MySVG);
 
