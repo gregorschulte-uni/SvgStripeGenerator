@@ -20,10 +20,10 @@ namespace SvgStripeGenerator
         }
 
         string MySVGstart = "<svg  xmlns=\"http://www.w3.org/2000/svg\"\r\nxmlns:xlink=\"http://www.w3.org/1999/xlink\" width=\"297mm\" height=\"210mm\"> \n\r";
-        string MySVGcontent = "\n\r";
+        string MySVGcontent = "";
         string MySVGend = "</svg>";
         string MySVG = "";
-        string path = @"c:\temp\MyTest.svg";
+        string path = @"c:\Optomotor.svg";
         bool color = true;
         string bw = "#000000";
 
@@ -43,11 +43,17 @@ namespace SvgStripeGenerator
 
             MySVGcontent = MySVGcontent + "<rect x=\"" + (1 * (double.Parse(MyTextBoxWidth.Text) / int.Parse(MyTextBoxStripes.Text))).ToString(CultureInfo.CreateSpecificCulture("en-GB")) + "mm\" y=\"10mm\" height=\"100mm\" width=\"" + ((double.Parse(MyTextBoxWidth.Text))).ToString(CultureInfo.CreateSpecificCulture("en-GB")) + "mm\" style=\"stroke:#000000; stroke-width:0.1mm; fill: none  \"/> \n\r";
 
-
             MySVG = MySVGstart + MySVGcontent + MySVGend;
-            File.WriteAllText(path, MySVG);
 
-            Console.Beep();
+            MySaveFileDialog.ShowDialog();
+
+            if (MySaveFileDialog.FileName !="")
+            {
+                path = Path.GetFullPath(MySaveFileDialog.FileName);
+                File.WriteAllText(path, MySVG);
+            }           
+
+            
         }
 
         private void MyPictureBoxFillColor_Click(object sender, EventArgs e)
